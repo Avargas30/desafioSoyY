@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Hola: {{data.name}}</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Code</mat-label>
+    <input matInput [(ngModel)]="data.code">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Numero de identificación</mat-label>
+    <input matInput [(ngModel)]="data.identificationNumber">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Nombre de contacto</mat-label>
+    <input matInput [(ngModel)]="data.contactName">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data.code" cdkFocusInitial>Aceptar</button>
+</div>
